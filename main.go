@@ -61,7 +61,7 @@ func main() {
 			return
 		}
 		defer f.Close()
-		_, _ = f.WriteString("IP,ORIGIN,CERT_DOMAIN,CERT_ISSUER,GEO_CODE\n")
+		_, _ = f.WriteString("IP,ORIGIN,TLS,ALPN,CURVE,CERT_LENGTH,CERT_SIGNATURE,CERT_PUBLICKEY,CERT_DOMAIN,CERT_ISSUER,GEO_CODE\n")
 		outWriter = f
 	}
 	var hostChan <-chan Host
